@@ -2,6 +2,8 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -11,7 +13,7 @@ public class PracticeFormTest {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 24000;
+       // Configuration.timeout = 24000;
     }
     @Test
     void practiceFormTest() {
@@ -19,7 +21,7 @@ public class PracticeFormTest {
         $("#firstName").setValue("fill");
         $("#lastName").setValue("good");
         $("#userEmail").setValue("qwerty@ty.ru");
-        $("[for='gender-radio-2']").click(); // gender
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("8888888888");
 
         $("#dateOfBirthInput").click();
@@ -27,11 +29,28 @@ public class PracticeFormTest {
         $(".react-datepicker__year-select").selectOptionByValue("1992");
         $(".react-datepicker__day--014").click();
 
-     //   $("#subjectsContainer").;
-        $("[for='hobbies-checkbox-2']").click();// hobbies
-       // $("#uploadPicture").uploadFromClasspath("picture(2).png");
-      //  $("currentAddress").setValue("Spb, 363");
-     //   $("").click();
-       // $("[id=search]").shouldHave(text("https://ru.selenide.org"));
+        $("#subjectsInput").val("Hindi").pressEnter();
+        $("#hobbiesWrapper").$(byText("Reading")).click();
+
+        $("#uploadPicture").uploadFromClasspath("picture (2).jpg");
+        $("#currentAddress").setValue("Spb, 363");
+        $("#react-select-3-input").val("Haryana").pressEnter();
+        $("#react-select-4-input").val("Karnal").pressEnter();
+        $("#submit").pressEnter();
+
+        $(".table-responsive").shouldHave(
+                        text("fill good"),
+                        text("qwerty@ty.ru"),
+                        text("Male"),
+                        text("8888888888"),
+                        text("14 January,1992"),
+                        text("Hindi"),
+                        text("Reading"),
+                        text("picture (2).jpg"),
+                        text("Spb, 363"),
+                        text("Haryana Karnal"));
     }
 }
+
+
+
