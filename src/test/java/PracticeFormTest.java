@@ -38,17 +38,16 @@ public class PracticeFormTest {
         $("#react-select-4-input").val("Karnal").pressEnter();
         $("#submit").pressEnter();
 
-        $(".table-responsive").shouldHave(
-                        text("fill good"),
-                        text("qwerty@ty.ru"),
-                        text("Male"),
-                        text("8888888888"),
-                        text("14 January,1992"),
-                        text("Hindi"),
-                        text("Reading"),
-                        text("picture (2).jpg"),
-                        text("Spb, 363"),
-                        text("Haryana Karnal"));
+        $(".table-responsive").shouldHave(text("fill good"));
+        $(".table-responsive").shouldHave(text("qwerty@ty.ru"));
+        $(".table-responsive").shouldHave(text("Male"));
+        $(".table-responsive").shouldHave(text("8888888888"));
+        $(".table-responsive").shouldHave(text("14 January,1992"));
+        $(".table-responsive").shouldHave(text("Hindi"));
+        $(".table-responsive").shouldHave(text("Reading"));
+        $(".table-responsive").shouldHave(text("picture (2).jpg"));
+        $(".table-responsive").shouldHave(text("Spb, 363"));
+        $(".table-responsive").shouldHave(text("Haryana Karnal"));
     }
 }
 
