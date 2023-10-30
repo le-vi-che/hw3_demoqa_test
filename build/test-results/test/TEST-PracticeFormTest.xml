@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PracticeFormTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-29T16:20:37" hostname="DESKTOP-TIL4E8L" time="16.361">
+<testsuite name="PracticeFormTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-30T13:41:21" hostname="DESKTOP-TIL4E8L" time="8.484">
   <properties/>
-  <testcase name="practiceFormTest()" classname="PracticeFormTest" time="16.361"/>
+  <testcase name="practiceFormTest()" classname="PracticeFormTest" time="8.484"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
@@ -9,7 +9,7 @@ SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
 SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
 SLF4J: Ignoring binding found at [jar:file:/C:/Users/SPB/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.29/82ae07f95088577987a15d90171de12b00d81847/slf4j-simple-1.7.29.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
-окт. 29, 2023 7:20:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+окт. 30, 2023 4:41:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 118, so returning the closest version found: 117
 ]]></system-err>
 </testsuite>
