@@ -13,7 +13,7 @@ public class SelenideRepositorySearch {
         Configuration.baseUrl = "https://github.com";
     }
     @Test
-   void shouldFindSelenideRepositoryAtTheTop(){
+   void shouldFindCode(){
         open("/selenide/selenide");
         $("#wiki-tab").click();
         $(".wiki-rightbar ul li button").click();
