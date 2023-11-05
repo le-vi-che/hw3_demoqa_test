@@ -15,8 +15,8 @@ public class DragAndDropTest {
     @Test
     void moveDragAndDrop() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
-        actions().dragAndDrop($("#column-a"),$("#column-b"));
-        $("#column-a").$("header").shouldHave(text("A"));
-        $("#column-b").$("header").shouldHave(text("B"));
+        $("#column-a").dragAndDropTo("#column-b");
+        $("#column-b").shouldHave(text("A"));
+        $("#column-a").shouldHave(text("B"));
     }
 }
