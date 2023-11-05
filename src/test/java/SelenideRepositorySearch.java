@@ -12,6 +12,7 @@ public class SelenideRepositorySearch {
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://github.com";
     }
+
     @Test
    void shouldFindCode(){
         open("/selenide/selenide");
