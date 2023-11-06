@@ -18,7 +18,7 @@ public class SolutionsSearch {
         open("https://github.com");
         $("ul.d-lg-flex.list-style-none").
                 $(byText("Solutions")).
-                click();
+                hover();
         $("[href='/enterprise']").click();
         $("#hero-section-brand-heading").shouldHave(text("The AI-powered developer platform."));
     }
