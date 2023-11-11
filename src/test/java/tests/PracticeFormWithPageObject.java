@@ -7,34 +7,49 @@ public class PracticeFormWithPageObject extends TestBase {
 
   RegistrationPage registrationPage = new RegistrationPage();
 
+    private String FIRST_NAME = "fill",
+            LAST_NAME = "good",
+            USER_EMAIL = "qwerty@ty.ru",
+            GENDER = "Male",
+            USER_NUMBER = "8888888888",
+            DAY_BIRTH = "14",
+            MONTH_BIRTH = "July",
+            YEAR_BIRTH = "1992",
+            SUBJECTS = "Hindi",
+            HOBBIES = "Reading",
+            PICTURE = "picture (2).jpg",
+            CURRENT_ADDRESS = "Spb, 363",
+            STATE = "Haryana",
+            CITY = "Karnal";
+
     @Test
     void fullCompleteFormTest() {
 
        registrationPage.openPage()
-       .setFirstName("fill")
-       .setLastName("good")
-       .setUserEmail("qwerty@ty.ru")
-       .setGenterWrapper("Male")
-       .setUserNumber("8888888888")
-       .setDateOfBirth("14", "July", "1992")
-       .setSubjectsInput("Hindi")
-       .setHobbiesWrapperInput("Reading")
-       .setUploadPicture( "picture (2).jpg")
-       .setCurrentAddress("Spb, 363")
-       .setChooseState("Haryana")
-       .setChooseCity("Karnal")
+       .setFirstName(FIRST_NAME)
+       .setLastName(LAST_NAME)
+       .setUserEmail(USER_EMAIL)
+       .setGenterWrapper(GENDER)
+       .setUserNumber(USER_NUMBER)
+       .setDateOfBirth(DAY_BIRTH, MONTH_BIRTH, YEAR_BIRTH)
+       .setSubjectsInput(SUBJECTS)
+       .setHobbiesWrapperInput(HOBBIES)
+       .setUploadPicture( PICTURE)
+       .setCurrentAddress(CURRENT_ADDRESS)
+       .setChooseState(STATE)
+       .setChooseCity(CITY)
        .pressSubmit();
 
-        registrationPage.checkResult("Student Name", "fill good")
-                  .checkResult("Student Email", "qwerty@ty.ru")
-                 .checkResult("Gender", "Male")
-                .checkResult("Mobile", "8888888888")
-                .checkResult("Date of Birth", "14 July,1992")
+        registrationPage.checkResult("Student Name", FIRST_NAME + " " +LAST_NAME)
+                  .checkResult("Student Email", USER_EMAIL)
+                 .checkResult("Gender", GENDER)
+                .checkResult("Mobile", USER_NUMBER)
+                .checkResult("Date of Birth", DAY_BIRTH +" " + MONTH_BIRTH + "," + YEAR_BIRTH)
                 .checkResult("Subjects", "Hindi")
                 .checkResult("Hobbies","Reading")
-                .checkResult("Picture", "picture (2).jpg")
-                .checkResult("Address","Spb, 363")
-                .checkResult("State and City", "Haryana Karnal");
+                .checkResult("Picture", PICTURE)
+                .checkResult("Address", CURRENT_ADDRESS)
+                .checkResult("State and City", STATE + " " + CITY);
     }
 
 
@@ -42,15 +57,15 @@ public class PracticeFormWithPageObject extends TestBase {
     void partCompleteFormTest() {
 
         registrationPage.openPage()
-                .setFirstName("fill")
-                .setLastName("good")
-                .setGenterWrapper("Male")
-                .setUserNumber("8888888888")
+                .setFirstName(FIRST_NAME)
+                .setLastName(LAST_NAME)
+                .setGenterWrapper(GENDER)
+                .setUserNumber(USER_NUMBER)
                 .pressSubmit();
 
-        registrationPage.checkResult("Student Name", "fill good")
-                .checkResult("Gender", "Male")
-                .checkResult("Mobile", "8888888888");
+        registrationPage.checkResult("Student Name", FIRST_NAME + " " +LAST_NAME)
+                .checkResult("Gender", GENDER)
+                .checkResult("Mobile", USER_NUMBER);
     }
 
     @Test

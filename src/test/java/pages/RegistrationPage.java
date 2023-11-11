@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 import pages.comonents.CalendarComponent;
+import pages.comonents.TableResponsiveComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -37,6 +38,8 @@ public class RegistrationPage {
         chooseCity = $("#react-select-4-input");
 
            CalendarComponent calendarComponent = new CalendarComponent();
+
+    TableResponsiveComponent tableResponsiveComponent = new TableResponsiveComponent();
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
@@ -129,9 +132,9 @@ public class RegistrationPage {
     }
 
     public RegistrationPage checkResult(String key, String value){
-            $(".table-responsive").$(byText(key)).parent().shouldHave(text(value));
+        tableResponsiveComponent.checkResultTable(key, value);
 
-            return this;
+                return this;
     }
 
     public RegistrationPage checkNotCompleteForm() {
