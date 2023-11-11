@@ -3,7 +3,7 @@ package tests;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
-public class PracticeFormWithPageObject extends TestBase {
+public class PracticeFormWithFakeTest extends TestBase {
 
   RegistrationPage registrationPage = new RegistrationPage();
 
@@ -57,8 +57,9 @@ public class PracticeFormWithPageObject extends TestBase {
     void negativeCompleteFormTest() {
 
         registrationPage.openPage()
-                 .pressSubmit()
-                 .checkNotCompleteForm();
+                 .pressSubmit();
+
+        registrationPage.checkNotCompleteForm();
             }
 }
 

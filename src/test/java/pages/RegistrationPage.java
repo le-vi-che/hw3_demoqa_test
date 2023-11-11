@@ -36,7 +36,7 @@ public class RegistrationPage {
 
         chooseCity = $("#react-select-4-input");
 
-        CalendarComponent calendarComponent = new CalendarComponent();
+           CalendarComponent calendarComponent = new CalendarComponent();
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
@@ -134,11 +134,11 @@ public class RegistrationPage {
             return this;
     }
 
-    public RegistrationPage checkNotCompleteForm(String value){
-        firstNameInput.setValue(value);
+    public RegistrationPage checkNotCompleteForm() {
+        firstNameInput.shouldHave(Condition.cssValue("border-color", "rgb(220, 53, 69)"));
 
-        return this;
-    }
+            return this;
+        }
 
     }
 
