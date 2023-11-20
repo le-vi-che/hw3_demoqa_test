@@ -1,16 +1,16 @@
-.gradle
-gradle
-build/
+//.gradle
+//gradle
+//build
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-gradlew
-gradlew.bat
-settings.gradle
-utils
+//gradlew
+//gradlew.bat
+//settings.gradle
+//utils
 
 ### IntelliJ IDEA ###
-.idea
+//.idea
 *.iws
 *.iml
 *.ipr
