@@ -1,10 +1,8 @@
-package pages;
+package pages.components.hw8;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
-import pages.comonents.CalendarComponent;
-import pages.comonents.TableResponsiveComponent;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;

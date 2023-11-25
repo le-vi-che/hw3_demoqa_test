@@ -1,8 +1,10 @@
-package tests;
+package tests.hw8;
 
-import data.TestData;
+import data.hw8.TestData;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
+import pages.components.hw8.RegistrationPage;
+import tests.hw3.TestBase;
 
 
 public class PracticeFormWithFaker extends TestBase {
@@ -10,6 +12,7 @@ public class PracticeFormWithFaker extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
     @Test
+    @DisplayName("Полное заполнение формы")
     void fullCompleteFormTest() {
 
        registrationPage.openPage()

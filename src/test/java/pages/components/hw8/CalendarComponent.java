@@ -1,4 +1,4 @@
-package pages.comonents;
+package pages.components.hw8;
 
 import static com.codeborne.selenide.Selenide.$;
 

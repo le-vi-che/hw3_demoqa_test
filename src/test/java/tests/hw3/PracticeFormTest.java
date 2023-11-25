@@ -1,4 +1,4 @@
-package tests;
+package tests.hw3;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -36,7 +36,7 @@ public class PracticeFormTest {
         $("#subjectsInput").val("Hindi").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
 
-        $("#uploadPicture").uploadFromClasspath("picture (2).jpg");
+        $("#uploadPicture").uploadFromClasspath("picture2.png");
         $("#currentAddress").setValue("Spb, 363");
         $("#react-select-3-input").val("Haryana").pressEnter();
         $("#react-select-4-input").val("Karnal").pressEnter();
@@ -49,7 +49,7 @@ public class PracticeFormTest {
         $(".table-responsive").shouldHave(text("14 January,1992"));
         $(".table-responsive").shouldHave(text("Hindi"));
         $(".table-responsive").shouldHave(text("Reading"));
-        $(".table-responsive").shouldHave(text("picture (2).jpg"));
+        $(".table-responsive").shouldHave(text("picture2.png"));
         $(".table-responsive").shouldHave(text("Spb, 363"));
         $(".table-responsive").shouldHave(text("Haryana Karnal"));
     }

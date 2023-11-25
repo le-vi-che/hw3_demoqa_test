@@ -1,7 +1,8 @@
-package tests;
+package tests.hw7;
 
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
+import pages.components.hw8.RegistrationPage;
+import tests.hw3.TestBase;
 
 public class PracticeFormWithPageObject extends TestBase {
 
@@ -17,7 +18,7 @@ public class PracticeFormWithPageObject extends TestBase {
             yearBirth = "1992",
             subjects = "Hindi",
             hobbies = "Reading",
-            picture = "picture (2).jpg",
+            picture = "picture2.png",
             currentAddres = "Spb, 363",
             state = "Haryana",
             city = "Karnal";
