@@ -22,8 +22,8 @@ public class MyParamTest extends TestsBase {
     }
 
     @ValueSource(strings =
-        {"Частным лицам", "Малому бизнесу и ИП", "Корпорациям", "Финансовым организациям"
-    })
+        {"Частным лицам", "Малому бизнесу и ИП", "Корпорациям", "Финансовым организациям"}
+    )
     @ParameterizedTest(name = "На главной странице банка должен находится раздел {0}")
     @Tag("SMOKE")
     void successfulSearchTest(String searchQuery){
