@@ -1,4 +1,4 @@
-package data.hw8;
+package data;
 
 import com.github.javafaker.Faker;
 
