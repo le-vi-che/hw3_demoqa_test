@@ -1,8 +1,7 @@
-package tests;
+package tests.hw10;
 
 import com.codeborne.selenide.Configuration;
 import data.hw10.Lang;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
