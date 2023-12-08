@@ -9,8 +9,6 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 
-// Написать тест на проверку названия Issue в репозитории через Web-интерфейс.
-//            3. Шаги с аннотацией @Step*/
 public class StepsTests {
 
     @Test
