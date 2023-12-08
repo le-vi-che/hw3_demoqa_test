@@ -1,4 +1,4 @@
-package data;
+package tests.hw3;
 
 import com.github.javafaker.Faker;
 

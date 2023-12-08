@@ -3,8 +3,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.components.hw8.RegistrationPage;
-import tests.hw3.TestBase;
-import tests.hw3.TestData;
 
 @Tag("simple")
 public class PracticeFormWithJenkins extends TestBase {
